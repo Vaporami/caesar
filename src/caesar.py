@@ -1,13 +1,13 @@
 def cipher(string, key):
     ret = []
     for c in string:
-        ret.append(chr((ord(c) + key) % 255))
+        ret.append(chr((ord(c) + key) % 256))
     return "".join(ret)
 
 def decipher(string, key):
     ret = []
     for c in string:
-        ret.append(chr((ord(c) - key) % 255))
+        ret.append(chr((ord(c) - key) % 256))
     return "".join(ret)
 
 
